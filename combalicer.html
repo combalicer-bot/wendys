@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="combalicer.css">
+</head>
+<body>
+
+
+  <!-- Header & Navigation -->
+  <header class="navbar">
+    <div class="logo">Wendey`s Lucena</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropbtn">View our Menu ▼</a>
+          <div class="dropdown-content">
+            <a href="#burgers">Burgers</a>
+            <a href="#sandwich">Sandwich</a>
+            <a href="#fried chicken">Fried Chicken</a>
+            <a href="#fambox">Fambox</a>
+            <a href="#fambox platters">Fambox Platter</a>
+            <a href="#healthy salad">Healthy Salad</a>
+            <a href="#chilli">Chilli</a>
+            <a href="#sphagetti">Sphagetti</a>
+            <a href="#breakfast">Breakfast</a>
+            <a href="#frosty and fries">Frosty and Fries</a>
+            <a href="#beverages">Beverages</a>
+            <a href="#coffee">Coffee</a>
+            <a href="#ricebowl">Ricebowls</a>
+          </div>
+        </li>
+        <li><a href="#about-us">About us</a></li>
+        <li><a href="#contact-us">Contact</a></li>
+        <li id="openCartFromHeader" class="check-items-button">Check Your Items</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CART OVERLAY -->
+<div id="cartOverlay" class="cart-overlay"></div>
+
+<!-- CART SIDEBAR -->
+<div class="cart">
+  <div class="cart-header">
+    <h2>Your Items</h2>
+    <button class="close-cart" id="closeCartBtn">✕</button>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-footer">
+    <h3>Total: <span id="cartTotal">P0</span></h3>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+
+  <!-- Home Section -->
+  <section id="home" class="home-container">
+    <div class="background">
+      <img src="unnamed.jpg" alt="Restaurant background">
+    </div>
+  </section>
+
+
+  <!-- burgers Section -->
+  <section id="burgers" class="menu">
+    <h2>Burgers</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="download.jpg">
+        <h3>ChesseBurger Deluxe(solo)</h3>
+        <p>P100</p>
+      </div>
+
+
+      <div class="product">
+        <img src="combo.jpg">
+        <h3>ChesseBurger Deluxe(conbo)</h3>
+        <p>P175</p>
+      </div>
+
+
+      <div class="product">
+        <img src="download (1)bsolo.jpg">
+        <h3>Bacon ChesseBurger (solo)</h3>
+        <p>P114</p>
+      </div>
+
+      
+      <div class="product">
+        <img src="bcombo.jpg">
+        <h3>Bacon ChesseBurger (combo)</h3>
+        <p>P189</p>
+      </div>
+
+      <div class="product">
+        <img src="msolo.jpg">
+        <h3>Bacon Mushroom Melt (solo)</h3>
+        <p>P120</p>
+      </div>
+
+      <div class="product">
+        <img src="mcombo.jpg">
+        <h3>Bacon Mushroom Melt (combo)</h3>
+        <p>P120</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- sandwich Section -->
+  <section id="sandwich" class="menu">
+    <h2>Sandwich</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="fssolo.webp"> 
+        <h3>Fish Sandwich (solo)</h3>
+        <p>P162</p>
+      </div>
+
+
+      <div class="product">
+        <img src="fscombo.webp">
+        <h3>Fish Sandwich (combo)</h3>
+        <p>P237</p>
+      </div>
+
+
+      <div class="product">
+        <img src="ClassicChickenSandwich_Solo.webp" >
+        <h3>Classic Chicken Sandwich (solo)</h3>
+        <p>P157</p>
+      </div>
+
+      <div class="product">
+        <img src="ClassicChickenSandwich_Combo.webp">
+        <h3>Classic Chicken Sandwich (combo)</h3>
+        <p>P232</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Chicken Dishes Section -->
+  <section id="fried chicken" class="menu">
+    <h2>Fried Chicken</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="1.2._6-pc_Chicken_Nuggets_Solo.webp" >
+        <h3>6-ps Chicken Nuggets (solo)</h3>
+        <p>P127</p>
+      </div>
+
+
+      <div class="product">
+        <img src="2.1.6-pcChickenNuggetswithFries_Combo-Soda_65786806-5061-4f1d-8344-a2c02f96eaed.webp">
+        <h3>6-ps Chicken Nuggets with fries (combo)</h3>
+        <p>P182</p>
+      </div>
+
+
+      <div class="product">
+        <img src="3.1.6-pcChickenNuggetswithRice_Combo-Soda.webp">
+        <h3>6-ps Chicken Nuggets with rice (combo)</h3>
+        <p>P187</p>
+      </div>
+
+      <div class="product">
+        <img src="1-pcFriedChickenwithRice_Solo_5b396076-fcbd-4150-a891-a51044a75d88.webp">
+        <h3>1-pc Fried Chicken with rice (solo)</h3>
+        <p>P109</p>
+      </div>
+
+      <div class="product">
+        <img src="1-pcFriedChickenwithRice_Combo_8091e19c-7011-416e-8951-6df024b007b7.webp">
+        <h3>1-pc Fried Chicken with rice (combo)</h3>
+        <p>P139</p>
+      </div>
+
+      <div class="product">
+        <img src="1-pcFriedChickenwithRiceandFries_Solo.webp">
+        <h3>1-pc Fried Chicken w/ Fries (Ala carte)</h3>
+        <p>P130</p>
+      </div>
+
+      <div class="product">
+        <img src="1-pcFriedChickenwithRiceandFries_Combo_d678bd3d-265a-4c1f-ac83-fef6d6dae39c.webp">
+        <h3>1-pc Fried Chicken w/ Fries (Ala carte)</h3>
+        <p>P170</p>
+      </div>
+
+      <div class="product">
+        <img src="1-pcSpicyFriedChickenwithRice_Solo.webp">
+        <h3>1-pc Spicy Fried Chicken with Rice (solo)</h3>
+        <p>P112</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Fambox Section -->
+  <section id="fambox" class="menu">
+    <h2>Fambox</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="BMMfor4.webp" alt="Roast Beef">
+        <h3>Fambox bacon Mushroom Melt (good for 4)</h3>
+        <p>P665</p>
+      </div>
+
+
+      <div class="product">
+        <img src="BMMfor3.webp" alt="Pepper Steak Beef">
+        <h3>Fambox bacon Mushroom Melt (good for 3)</h3>
+        <p>P399</p>
+      </div>
+
+
+      <div class="product">
+        <img src="FamboxChickenfor4_4e376962-601e-431d-be92-3fb4065bb06f.webp" >
+        <h3>Fambox Fried Chicken(good for 4)</h3>
+        <p>P895</p>
+      </div>
+
+      
+      <div class="product">
+        <img src="FamboxChickenfor3.webp">
+        <h3>Fambox Fried Chicken(good for 3)</h3>
+        <p>P670</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Fambox Platter Section -->
+  <section id=" fambox platter" class="menu">
+    <h2>Fambox Platter</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="20.webp" >
+        <h3>20-ps Chicken Nuggets Box</h3>
+        <p>P378</p>
+      </div>
+
+
+      <div class="product">
+        <img src="MacaroniPlatter.webp">
+        <h3>Macaroni Salad Platter</h3>
+        <p>P260</p>
+      </div>
+
+
+      <div class="product">
+        <img src="SpaghettiPlatter.webp" >
+        <h3>Beefy sphagetti Platter</h3>
+        <p>P259</p>
+      </div>
+      
+      <div class="product">
+        <img src="6-pcChicken.webp" >
+        <h3>6-pc Chicken Box</h3>
+        <p>P510</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Healthy Salad Section -->
+  <section id="healthy salad" class="menu">
+    <h2>Healthy Salad</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="Apple_Shrimp_Salad_Side_6fedffaf-76dd-4d10-b7a1-956316b8bb12.webp">
+        <h3> Apple Srimp Salad</h3>
+        <p>P159</p>
+      </div>
+
+
+      <div class="product">
+        <img src="Website_-_Cobb_Salad.webp">
+        <h3>Cobb Salad</h3>
+        <p>P159</p>
+      </div>
+
+
+      <div class="product">
+        <img src="MacaroniPlatter.webp">
+        <h3>Macaroni Salad Big Plate</h3>
+        <p>P160</p>
+      </div>
+
+      <div class="product">
+        <img src="MacaroniSalad_Side.webp">
+        <h3>Macaroni Salad (side)</h3>
+        <p>P75</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Chilli Dishes Section -->
+  <section id="chilli" class="menu">
+    <h2>Chilli</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="ChiliClassic_solo.webp">
+        <h3> Chilli Classic (solo)</h3>
+        <p>P119</p>
+      </div>
+
+
+      <div class="product">
+        <img src="ChiliClassic_combo.webp">
+        <h3>Chilli Classic (combo)</h3>
+        <p>P154</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Spaghetti Dishes Section -->
+    <section id="spaghetti" class="menu">
+      <h2>Spaghetti</h2>
+      <div class="menu-grid">
+        <div class="product">
+          <img src="Spaghetti_Solo_5ecff287-f897-4a5c-a798-823887b262f6.webp">
+          <h3>Spaghetti (solo)</h3>
+          <p>P75</p>
+        </div>
+
+
+        <div class="product">
+          <img src="1-pcFriedChickenwSpaghetti_Solo.webp">
+          <h3>1-pc Fried Chicken with Spaghetti (Ala Carte)</h3>
+          <p>P150</p>
+        </div>
+
+
+        <div class="product">
+          <img src="1-pcFriedChickenwSpaghetti_Combo.webp">
+          <h3>1-pc Fried Chicken with Spaghetti (combo)</h3>
+          <p>P290</p>
+        </div>
+
+        <div class="product">
+          <img src="1-pcSpicyFriedChickenwSpaghetti_Solo.webp">
+          <h3>1-pc Spicy Fried Chicken with Spaghetti (Ala Carte)</h3>
+          <p>P155</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Breakfast Dishes Section -->
+    <section id="breakfast" class="menu">
+      <h2>Breakfast</h2>
+      <div class="menu-grid">
+        <div class="product">
+          <img src="Longganisa_Breakfast_Wrap_Solo.webp" >
+          <h3>Longganisa Breakfast Wrap Solo</h3>
+          <h3>(available at 5AM-10AM only)</h3>
+          <p>P155</p>
+        </div>
+
+
+        <div class="product">
+          <img src="LongganisaBreakfastWrap_Combo.webp">
+          <h3>Longganisa Breakfast Wrap Combo</h3>
+          <h3>(available at 5AM-10AM only)</h3>
+          <p>P155</p>
+        </div>
+
+
+        <div class="product">
+          <img src="BeefTapaBreakfastWrap_Solo.webp" >
+          <h3>Beef Tapa Breakfast Wrap Solo</h3>
+          <h3>(available at 5AM-10AM only)</h3>
+          <p>P155</p>
+        </div>
+
+         <div class="product">
+          <img src="BeefTapaBreakfastWrap_Combo.webp">
+          <h3>Beef Tapa Breakfast Wrap Combo</h3>
+          <h3>(available at 5AM-10AM only)</h>
+          <p>P155</p>
+        </div>
+      </div>
+    </section>
+    
+     <!--Frosty  Section -->
+  <section id="frosty and fries" class="menu">
+    <h2>Frosty Fries</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="Hot_Crispy_Fries_Regular.webp">
+        <h3>Natural Cut Fries</h3>
+         <p>P70</p>
+      </div>
+
+
+      <div class="product">
+        <img src="CinnamonChurros.webp">
+        <h3>Cinamon Sugar Churro Fries</h3>
+        <p>Solo P120</p>
+      </div>
+
+      <div class="product">
+        <img src="FF_Chocolate_Frosty_Regular.webp">
+        <h3>Choholate Frosty</h3>
+        <p>P50</p>
+      </div>
+
+      <div class="product">
+        <img src="FF_Vanilla_Frosty_Regular.webp">
+        <h3>Vanilla Frosty</h3>
+        <p>P50</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beverages Section -->
+  <section id="beverages" class="menu">
+    <h2>Beverages</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="BVIcedtea_Litro.webp">
+        <h3>Litro Iced Tea</h3>
+        <p>P140</p>
+      </div>
+
+
+      <div class="product">
+        <img src="BV_Iced_tea_Medium_79cda67d-5377-4efd-95eb-ebf955123371.webp">
+        <h3>Iced Tea Classic</h3>
+        <p>P90</p>
+      </div>
+
+      <div class="product">
+        <img src="Coke_Sprite_SarsiOrCokeZeroLarge.webp">
+        <h3>Coke,Sprite,Sarsi or Coke Zero</h3>
+        <p>P75</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coffee Dishes Section -->
+  <section id="coffee" class="menu">
+    <h2>Coffee</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="FrostyCoffee.webp">
+        <h3>Frosty Coffee</h3>
+        <p>P95</p>
+      </div>
+
+
+      <div class="product">
+        <img src="VanillaFrosty-ccino.webp">
+        <h3>Vanilla Frostyccino</h3>
+        <p>P95</p>
+      </div>
+
+
+      <div class="product">
+        <img src="KitkatFrostyFrappe.webp">
+        <h3>Kitkat Frosty Frappe</h3>
+        <p>P135</p>
+      </div>
+
+      <div class="product">
+        <img src="CoffeeJellyFrostyFrappe.webp">
+        <h3>Coffee Jell Frost Frappe</h3>
+        <p>P135</p>
+      </div>
+    </div>
+  </section>
+
+   <!-- Rice Bowls Dishes Section -->
+  <section id="ricebowl" class="menu">
+    <h2>Rice Bowl</h2>
+    <div class="menu-grid">
+      <div class="product">
+        <img src="BeefyMushroomRiceBowl_Solo.webp">
+        <h3>Beffy Mushroom Rice Bowl (solo)</h3>
+        <p>P189</p>
+      </div>
+
+
+      <div class="product">
+        <img src="BeefyMushroomRiceBowl_Combo.webp">
+        <h3>Beffy Mushroom Rice Bowl (combo)</h3>
+        <p>P215</p>
+      </div>
+
+
+      <div class="product">
+        <img src="BeefChiliRiceBowl_Solo_b4f25f20-158d-40a4-8fcc-9cd03686c576.webp">
+        <h3>Beef Chilli Rice Bowls (solo)</h3>
+        <p>P189</p>
+      </div>
+
+      
+      <div class="product">
+        <img src="BeefChiliRiceBowl_Combo.webp">
+        <h3>Beef Chilli Rice Bowls (combo)
+        <p>P215</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about-us" class="info-section">
+    <h2>About Us</h2>
+    <p>Welcome to our restaurant! We serve delicious home-style Filipino dishes with a modern twist.</p><br>
+    <p>operating hours 24/7</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.9492617179826!2d121.58405677485989!3d13.961625786452432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4d000e200b6d%3A0xd338384c853cf955!2sWendy%E2%80%99s%20-%20Lucena!5e0!3m2!1sen!2sph!4v1761115869946!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact-us" class="info-section">
+    <h2>Contact Us</h2>
+    <p>Email: deliveryservice@wendys.com.ph | Phone:  8-533-3333</p><br>
+    <p>We love to hear from you on our customer service, website or any topics
+       you want to share with us. Your comments and suggestions will be appreciated. 
+       Please complete the form or contact us directly.
+      </p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
